@@ -13,7 +13,7 @@ private class Course{
   //maps the document's name to Document object
   private HashMap docDict;
   //holds the documents sorted by views
-  private PriorityQueue docPQ;
+  private PriorityQueue docPQ;}
 
   //constructor
   private Course(String name, String description, User creator) {
@@ -27,35 +27,26 @@ private class Course{
   //I am unsure how requests work with java servlets so I don't know what to do with this
   //check the notes repo on slack for more info
   private void post() {
-    /*
-
-    Wendi's code here
-
-    */
+  return 
   }
   private Document[] sortDocs(int direction) {
-    /*
-
-    Wendi's code here
-
-    */
+    if (direction == 0) {
+    docPQ= docPQ + 1}
+    if (direction == 1) {
+    docPQ= docPQ - 1}
   }
   //called by User object
   private void addComment(User user, String comment, Document doc) {
-    /*
-
-    Wendi's code here
-
-    */
-  }
+  return new Comment(comment, user, this));
+    }
+  
   //called by User object
   private void removeComment(User user, Document doc, int commentIndex) {
-    /*
-
-    Wendi's code here
-
-    */
-  }
+  Comment comment= addComment.get(comment);
+   if (comment.getUploader() == user || user.isAdmin()) {
+      docDict.remove(comment);
+    }
+    }
 
   //gets name, description of course, and uploader along with docs uploaded, their uploaders, and their titles
   //called by User object
